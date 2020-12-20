@@ -62,11 +62,11 @@ class MainActivity : AppCompatActivity() {
     super.onActivityResult(requestCode, resultCode, data)
     when (requestCode) {
       ADD_QUOTE_REQUEST_CODE -> {
-        val intentData = data!!
+        val intentData = data
         val newNote = Quote(
-            text = intentData.getStringExtra(AddEditActivity.EXTRA_TEXT)!!,
-            author = intentData.getStringExtra(AddEditActivity.EXTRA_AUTHOR)!!,
-            date = intentData.getStringExtra(AddEditActivity.EXTRA_DATE)!!
+            text = intentData?.getStringExtra(AddEditActivity.EXTRA_TEXT),
+            author = intentData?.getStringExtra(AddEditActivity.EXTRA_AUTHOR),
+            date = intentData?.getStringExtra(AddEditActivity.EXTRA_DATE)
         )
         quotesViewModel.insertQuote(newNote)
         Toast.makeText(this, "Quote saved!", Toast.LENGTH_SHORT).show()
