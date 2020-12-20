@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.raywenderlich.android.rwquotes.ui.viewmodel.QuoteViewModelFactory
+import id.nizardev.qoutes.ui.viewmodel.QuoteViewModelFactory
 import id.nizardev.qoutes.R
 import id.nizardev.qoutes.data.Quote
 import id.nizardev.qoutes.data.QuotesRepositoryImpl
